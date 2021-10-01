@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
 import Statistics from '../components/Statistics';
 import Button from '../components/Button';
 import styles from "../styles/Resultado.module.css";
@@ -6,8 +6,8 @@ import styles from "../styles/Resultado.module.css";
 export default function Result(){
   const router = useRouter()
 
-  const total = +router.query.total;
-  const hits = +router.query.hits;
+    const total = Number(router.query.total);
+   const hits = Number(router.query.hits);
   const percent = Math.round((hits / total ) * 100)
 
   return (
