@@ -3,9 +3,7 @@ import Quiz from '../components/Quiz'
 import QuestionModel from '../model/question'
 import { useRouter } from 'next/router'
 
-const BASE_URL = 'http://localhost:3000/api'
-
-/* https://nextjs-quiz-ebon.vercel.app/api */
+const BASE_URL = 'https://nextjs-quiz-ebon.vercel.app/api'
 
 export default function Home() {
 
