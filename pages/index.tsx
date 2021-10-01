@@ -2,9 +2,8 @@ import { useEffect, useState } from 'react'
 import Quiz from '../components/Quiz'
 import QuestionModel from '../model/question'
 import { useRouter } from 'next/router'
-import questions from './api/dbQuestions'
 
-const BASE_URL= 'http://localhost:3000/api'
+const BASE_URL= 'https://nextjs-quiz-ebon.vercel.app/api'
 
 export default function Home() {
 
@@ -17,7 +16,6 @@ export default function Home() {
   async function getQuestionsIds(){
     const resp = await fetch(`${BASE_URL}/quiz`)
     const ids = await resp.json()
-    console.log(ids)
     setIds(ids)
   }
 
